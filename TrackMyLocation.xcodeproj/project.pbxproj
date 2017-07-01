@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		3721F0EC1F07243600DA7455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721F0EB1F07243600DA7455 /* AppDelegate.swift */; };
-		3721F0EE1F07243600DA7455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721F0ED1F07243600DA7455 /* ViewController.swift */; };
 		3721F0F11F07243600DA7455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3721F0EF1F07243600DA7455 /* Main.storyboard */; };
 		3721F0F31F07243600DA7455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3721F0F21F07243600DA7455 /* Assets.xcassets */; };
 		3721F0F61F07243600DA7455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3721F0F41F07243600DA7455 /* LaunchScreen.storyboard */; };
+		3721F0FE1F0724D800DA7455 /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721F0FD1F0724D800DA7455 /* LocationTableViewController.swift */; };
+		3721F1001F07252B00DA7455 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721F0FF1F07252B00DA7455 /* LocationTableViewCell.swift */; };
+		3721F1021F07258F00DA7455 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3721F1011F07258F00DA7455 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3721F0E81F07243600DA7455 /* TrackMyLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMyLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3721F0EB1F07243600DA7455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3721F0ED1F07243600DA7455 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3721F0F01F07243600DA7455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3721F0F21F07243600DA7455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3721F0F51F07243600DA7455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3721F0F71F07243600DA7455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3721F0FD1F0724D800DA7455 /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
+		3721F0FF1F07252B00DA7455 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		3721F1011F07258F00DA7455 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				3721F0EB1F07243600DA7455 /* AppDelegate.swift */,
-				3721F0ED1F07243600DA7455 /* ViewController.swift */,
+				3721F0FD1F0724D800DA7455 /* LocationTableViewController.swift */,
+				3721F0FF1F07252B00DA7455 /* LocationTableViewCell.swift */,
+				3721F1011F07258F00DA7455 /* Location.swift */,
 				3721F0EF1F07243600DA7455 /* Main.storyboard */,
 				3721F0F21F07243600DA7455 /* Assets.xcassets */,
 				3721F0F41F07243600DA7455 /* LaunchScreen.storyboard */,
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3721F0EE1F07243600DA7455 /* ViewController.swift in Sources */,
+				3721F1001F07252B00DA7455 /* LocationTableViewCell.swift in Sources */,
+				3721F0FE1F0724D800DA7455 /* LocationTableViewController.swift in Sources */,
+				3721F1021F07258F00DA7455 /* Location.swift in Sources */,
 				3721F0EC1F07243600DA7455 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
