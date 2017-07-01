@@ -18,6 +18,8 @@ class LocationTableViewController: UITableViewController {
     
     let locationManager = CLLocationManager()
     
+    var lastLocationUpdateTime: Date!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLocationManager()
@@ -101,6 +103,7 @@ extension LocationTableViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
         CLGeocoder().reverseGeocodeLocation(manager.location!) { [weak self] (placemarks, error) in
             if error != nil {
                 print("Error: " + error!.localizedDescription)
@@ -109,10 +112,27 @@ extension LocationTableViewController: CLLocationManagerDelegate {
             if placemarks!.count > 0 {
                 let placemark = placemarks![0] as CLPlacemark
                 self?.locationManager.stopUpdatingLocation()
-                self?.getLocationButton.isEnabled = true  // we could start a new location now
-                let location = Location(coordinate: (manager.location?.coordinate)!, placemark: placemark)
-                self?.locations.insert(location, at: 0)
-                self?.tableView.insertRows(at: [IndexPath(row:0, section:0)], with: .fade)
+                
+                guard let managerLocation = manager.location else {
+                    print("How manager location is nil ??")
+                    self?.getLocationButton.isEnabled = true
+                    return
+                }
+                
+                let location = Location(coordinate: managerLocation.coordinate, placemark: placemark)
+                
+                // to avoid updating the table with multiple location updates at once. (same coord and time)
+                if self?.lastLocationUpdateTime == nil || ((self?.lastLocationUpdateTime)! < Date().addingTimeInterval(-1.0)) {
+                    self?.locations.insert(location, at: 0)
+                    self?.tableView.insertRows(at: [IndexPath(row:0, section:0)], with: .fade)
+                }
+                
+                // defer always run before exiting this block (including the guard else above)
+                defer {
+                    self?.lastLocationUpdateTime = Date()
+                    self?.clearAllButton.isEnabled = true  // we have at least one location
+                    self?.getLocationButton.isEnabled = true  // we could start a new location now
+                }
             }
         }
     }

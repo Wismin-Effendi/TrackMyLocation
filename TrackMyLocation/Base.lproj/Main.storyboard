@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="F62-L2-jkN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lXx-2T-Gqh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,17 +26,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="R0j-J7-Afy">
-                                            <rect key="frame" x="8" y="8" width="200" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateTime" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="R0j-J7-Afy">
+                                            <rect key="frame" x="8" y="8" width="359" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="9Lo-op-Z9Q"/>
-                                                <constraint firstAttribute="width" constant="200" id="neR-OG-XoA"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude and Longitude" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="A9a-Yt-Rdl">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude and Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="A9a-Yt-Rdl">
                                             <rect key="frame" x="8" y="36" width="359" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="20" id="QZS-c8-HdF"/>
@@ -54,6 +53,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Q5b-CH-MkD" firstAttribute="top" secondItem="A9a-Yt-Rdl" secondAttribute="bottom" constant="8" id="2OK-A2-K3o"/>
+                                        <constraint firstItem="R0j-J7-Afy" firstAttribute="trailing" secondItem="bht-l1-3bI" secondAttribute="trailingMargin" id="Pjn-Aq-Vlv"/>
                                         <constraint firstItem="Q5b-CH-MkD" firstAttribute="trailing" secondItem="bht-l1-3bI" secondAttribute="trailingMargin" id="Qxc-Bp-ASX"/>
                                         <constraint firstItem="Q5b-CH-MkD" firstAttribute="bottom" secondItem="bht-l1-3bI" secondAttribute="bottomMargin" id="SUc-rY-LwF"/>
                                         <constraint firstItem="Q5b-CH-MkD" firstAttribute="top" secondItem="A9a-Yt-Rdl" secondAttribute="bottom" constant="8" id="VBE-Ej-ziN"/>
@@ -96,44 +96,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ana-Vt-VXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2999.1999999999998" y="107.49625187406298"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FV7-6A-pu5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lXx-2T-Gqh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QRF-xb-TOs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TDa-h7-Coc" kind="relationship" relationship="rootViewController" id="jLg-MO-lJr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1m-Xf-IUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="2060" y="107.49625187406298"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="f5n-e6-esi">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F62-L2-jkN" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N8M-NZ-SHS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="nbf-Mo-TrV" kind="relationship" relationship="rootViewController" id="Of7-QB-Xra"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TO7-aK-cai" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="181.59999999999999" y="107.49625187406298"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="o0E-tc-DLn">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nbf-Mo-TrV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="XIn-L0-FyA"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="faU-ct-com">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="TDa-h7-Coc" kind="relationship" relationship="rootViewController" id="jqO-Us-mxB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fRf-UT-LJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1120.8" y="107.49625187406298"/>
         </scene>
     </scenes>
 </document>
